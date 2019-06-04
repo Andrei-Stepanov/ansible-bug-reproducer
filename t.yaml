@@ -1,0 +1,6 @@
+- hosts: localhost
+  roles:
+  - role: role1
+    required_packages: "pkg1"
+  - role: role2
+    required_packages: "pkg2"

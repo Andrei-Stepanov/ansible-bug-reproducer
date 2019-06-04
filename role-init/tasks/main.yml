@@ -1,0 +1,15 @@
+- name: "role-init: debug1"
+  debug:
+    msg: "Required packages: {{ required_packages }}"
+
+- name: "role-init: debug2"
+  debug:
+    msg: "Role required packages: {{ role_pkgs_req }}"
+
+- name: Task to include role-pkgs role
+  include_role:
+    name: role-pkgs
+  vars:
+    param_req_pkgs:
+      - "{{ required_packages }}"
+      - "{{ role_pkgs_req }}"

@@ -1,0 +1,12 @@
+---
+
+tests: []
+required_packages: []
+tenv_workdir: /var/str/
+remote_artifacts: /tmp/artifacts/
+test_runner_inventory_name: test-runner
+artifacts: "{{ lookup('env', 'TEST_ARTIFACTS')|default('./artifacts', true) }}"
+# distro_name: rhel, centos, fedora
+distro_name: "{{ansible_distribution|lower}}"
+# distro_name_ver: rhel_7, centos_7, fedora_22
+distro_name_ver: "{{ansible_distribution|lower}}_{{ansible_distribution_major_version}}"

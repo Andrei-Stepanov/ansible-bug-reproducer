@@ -1,0 +1,5 @@
+---
+
+  - name: "role2 debug"
+    debug:
+      msg: "Hello from role2"

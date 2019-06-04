@@ -1,0 +1,2 @@
+- debug:
+    msg: "role-pkgs: var param_req_pkgs: {{ param_req_pkgs }}"
